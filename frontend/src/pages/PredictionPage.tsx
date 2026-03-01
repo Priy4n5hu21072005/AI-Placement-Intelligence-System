@@ -13,7 +13,7 @@ import {
 import axios from 'axios';
 import { useToast } from '../context/ToastContext';
 
-const API_BASE_URL = 'http://localhost:8000'; // Adjust based on your FastAPI port
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://ai-placement-intelligence-system.onrender.com';
 
 interface PredictionResult {
     prediction: number;
